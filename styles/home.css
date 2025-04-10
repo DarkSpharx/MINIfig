@@ -1,0 +1,17 @@
+/* Section Home */
+#home {
+  min-height: 100vh; /* La section home prend toute la hauteur de la fenêtre */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  & a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

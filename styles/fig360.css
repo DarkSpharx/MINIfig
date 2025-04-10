@@ -1,0 +1,11 @@
+/* Styles pour la section d'animation de la figurine */
+#fig360 {
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 5);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

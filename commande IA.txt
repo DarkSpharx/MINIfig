@@ -1,0 +1,6 @@
+au hover openMenu ajouter la class display-none a openMenuPassif et la class display-block a openMenuActif et quand la souris sort de openMenu enlever la class display-none a openMenuPassif et ajouter la class display-block a openMenuActif
+
+au clic sur openMenu ajouter la class .menu-open a la div id="nav"
+au clic sur closeMenu enlever la class .menu-open a la div id="nav"
+au scroll ou au redimensionnement de la fenetre du navigateur enlever la class .menu-open a la div id="nav"
+au clic sur un lien dans le #burger-menu ou dans en dehors de #burger-menu enlever la class .menu-open a la div id="nav"
