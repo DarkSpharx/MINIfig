@@ -1,6 +1,38 @@
 au hover openMenu ajouter la class display-none a openMenuPassif et la class display-block a openMenuActif et quand la souris sort de openMenu enlever la class display-none a openMenuPassif et ajouter la class display-block a openMenuActif
 
-au clic sur openMenu ajouter la class .menu-open a la div id="nav"
-au clic sur closeMenu enlever la class .menu-open a la div id="nav"
-au scroll ou au redimensionnement de la fenetre du navigateur enlever la class .menu-open a la div id="nav"
-au clic sur un lien dans le #burger-menu ou dans en dehors de #burger-menu enlever la class .menu-open a la div id="nav"
+au clic sur la variable let "openMenu" ajouter la class "burger-menu-open" a la variable let "burger-menu"
+au clic sur la variable let "closeMenu" enlever la class "burger-menu-open" a la variable let "burger-menu"
+au scroll ou au redimensionnement de la fenetre du navigateur enlever la class "burger-menu-open" a la variable let "burger-menu"
+au clic sur un lien dans le #burger-menu ou dans en dehors de #burger-menu enlever la class "burger-menu-open" a la variable let "burger-menu"
+
+<img src="/media/image/01_face.webp" alt="Vue de face de la figurine LEGO"/>
+<img src="/media/image/02_tiersDroit.webp" alt="Vue de tiers face droit de la figurine LEGO"/>
+<img src="/media/image/03_troisQuartsDroit.webp" alt="Vue de trois quarts face droit de la figurine LEGO"/>
+<img src="/media/image/04_ProfileDroit.webp" alt="Vue de profil droit de la figurine LEGO"/>
+<img src="/media/image/05_troisQuartsDosDroit.webp" alt="Vue de trois quarts dos droit de la figurine LEGO"/>
+<img src="/media/image/06_dos.webp" alt="Vue de dos de la figurine LEGO"/>
+<img src="/media/image/07_troisQuartsDosGauche.webp" alt="Vue de trois quarts dos gauche de la figurine LEGO"/>
+<img src="/media/image/08_ProfileGauche.webp"alt="Vue de profil gauche de la figurine LEGO"/>
+<img src="/media/image/09_troisQuartsGauche.webp" alt="Vue de trois quarts face gauche de la figurine LEGO"/>
+<img src="/media/image/10_tiersGauche.webp" alt="Vue de tiers face gauche de la figurine LEGO"/>
+
+j'ai 10 images. 
+image 1 src="/media/image/01_face.webp" avec un alt="Vue de face de la figurine LEGO"
+image 2 src="/media/image/02_tiersDroit.webp" avec un alt="Vue de tiers face droit de la figurine LEGO"
+image 3 src="/media/image/03_troisQuartsDroit.webp" avec un alt="Vue de trois quarts face droit de la figurine LEGO"
+image 4 src="/media/image/04_ProfileDroit.webp" avec un alt="Vue de profil droit de la figurine LEGO"
+image 5 src="/media/image/05_troisQuartsDosDroit.webp" avec un alt="Vue de trois quarts dos droit de la figurine LEGO"
+image 6 src="/media/image/06_dos.webp" avec un alt="Vue de dos de la figurine LEGO"
+image 7 src="/media/image/07_troisQuartsDosGauche.webp" avec un alt="Vue de trois quarts dos gauche de la figurine LEGO"
+image 8 src="/media/image/08_ProfileGauche.webp" avec un alt="Vue de profil gauche de la figurine LEGO"
+image 9 src="/media/image/09_troisQuartsGauche.webp" avec un alt="Vue de trois quarts face gauche de la figurine LEGO"
+image 10 src="/media/image/10_tiersGauche.webp" avec un alt="Vue de tiers face gauche de la figurine LEGO"
+
+c'est 10 images représentent une figurine lego prise en photo a 360° horizontalement
+ 
+J'ai besoin d'une fonction javascript pour créer une animation avec les photos au scroll pour donner l'impression que la figurine tourne sur elle. 
+il faut que ce soit fluide au scroll et qu'il y est un effet de zoom au scroll descandant et dézoom au scroll montant
+
+les photos ne sont pas dans le html il faut les importer avec le chemin fournit
+
+l'animation sera dans la section id="fig360"

@@ -7,21 +7,21 @@ let closeMenu = document.getElementById("close-menu-icone");
 let closeMenuPassif = document.getElementById("close-menu-passif");
 let closeMenuActif = document.getElementById("close-menu-actif");
 
+let burgerMenu = document.getElementById("burger-menu");
+
 // cacher le header au scroll down et le faire réapparaître au scroll up
-let lastScrollPosition = 0;
+let lastScrollPosition = 0; // Initialiser la position de défilement précédente
 const header = document.querySelector("header");
+
 window.addEventListener("scroll", () => {
   const currentScrollPosition = window.scrollY;
 
-  if (
-    currentScrollPosition > lastScrollPosition &&
-    currentScrollPosition > window.innerHeight * 0.5
-  ) {
-    // Scrolling down past 50vh
-    header.style.transform = "translateY(-100%)"; // Hide header
-  } else if (currentScrollPosition < lastScrollPosition) {
-    // Scrolling up
-    header.style.transform = "translateY(0)"; // Show header
+  if (currentScrollPosition > lastScrollPosition) {
+    // Défilement vers le bas
+    header.style.transform = "translateY(-100%)"; // Masquer le header
+  } else {
+    // Défilement vers le haut
+    header.style.transform = "translateY(0)"; // Afficher le header
   }
 
   lastScrollPosition = currentScrollPosition;
@@ -47,7 +47,34 @@ closeMenu.addEventListener("mouseleave", () => {
   closeMenuPassif.classList.remove("display-none");
   closeMenuActif.classList.remove("display-block");
 });
-// le click sur l'icone menu
-// afficher le burger menu au clic sur l'icone open menu
-// fermer le burger menu au clic sur l'icone close menu et ou au scroll ou resize de la fenêtre
-// fermer le burger menu au clic sur un lien du menu ou en dehors du menu
+
+// burger menu
+// Ajouter la classe .burger-menu-open a burgerMenu au clic sur openMenu
+openMenu.addEventListener("click", () => {
+  burgerMenu.classList.add("burger-menu-open");
+});
+
+// Enlever la classe .burger-menu-open a burgerMenu au clic sur closeMenu
+closeMenu.addEventListener("click", () => {
+  console.log("clic icon closeMenu");
+  burgerMenu.classList.remove("burger-menu-open");
+});
+
+// // Enlever la classe .burger-menu-open a burgerMenu au scroll ou au redimensionnement de la fenêtre
+window.addEventListener("scroll", () => {
+  burgerMenu.classList.remove("burger-menu-open");
+});
+
+window.addEventListener("resize", () => {
+  burgerMenu.classList.remove("burger-menu-open");
+});
+
+// // Enlever la classe .burger-menu-open au clic sur un lien dans ou en dehors de #burger-menu
+// document.addEventListener("click", (event) => {
+//   if (
+//     event.target.closest("#burger-menu a") || // Clic sur un lien dans #burger-menu
+//     !event.target.closest("#burger-menu") // Clic en dehors de #burger-menu
+//   ) {
+//     burgerMenu.classList.remove("burger-menu-open");
+//   }
+// });
