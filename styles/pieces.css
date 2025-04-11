@@ -1,0 +1,75 @@
+#pieces {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.lego-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pastille {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(128, 128, 128, 0.8);
+  border: 2px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Positionnement des pastilles */
+.pastille-tete {
+  top: 26%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+}
+.pastille-bras {
+  top: 49%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.pastille-main {
+  top: 58%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+}
+.pastille-jambe {
+  top: 69%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+}
+.pastille-hanches {
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.pastille-torse {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Texte d'information */
+#texte-data-info {
+  display: none; /* caché par défaut */
+  text-align: center; /* centrer le texte */
+  margin-top: 8px; /* espacement au-dessus */
+}
+
+.texte-data-info {
+  color: #000; /* texte noir */
+  font-size: 17px; /* taille de police */
+  padding: 8px; /* espacement intérieur */
+}

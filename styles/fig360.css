@@ -4,7 +4,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f9f9f9;
   overflow: hidden;
-  /* position: relative; */
+  background-image: url(/media/image/01_face.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  object-fit: contain;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+#fig360 {
+  position: relative;
+  height: 100vh; /* Scroll sur 2 écrans (ajuste selon fluidité souhaitée) */
+}
+
+#viewer360 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 10;
+  transform: scale(1);
+  transition: transform 0.2s ease;
+  visibility: hidden; /* caché par défaut, visible quand actif */
+  background-color: white;
+}
+
+#viewer360 img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+#viewer360.visible {
+  visibility: visible;
+  opacity: 1;
 }

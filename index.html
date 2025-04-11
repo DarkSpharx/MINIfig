@@ -22,12 +22,14 @@
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/fig360.css" />
     <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/pieces.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <script type="module" src="js/scrollFig.js"></script>
     <script type="module" src="js/header.js"></script>
+    <script type="module" src="js/pieces.js"></script>
   </head>
   <body>
     <header>
@@ -159,9 +161,9 @@
               <div id="close-menu-actif" class="display-none"></div>
             </div>
             <ul>
-              <li class="burger-menu-li">
+              <!-- <li class="burger-menu-li">
                 <a class="burger-menu-a" href="/">Accueil</a>
-              </li>
+              </li> -->
               <li class="burger-menu-li">
                 <a class="burger-menu-a" href="/#fig360">Figurine</a>
               </li>
@@ -301,49 +303,36 @@
       </section>
 
       <section id="fig360">
-        <!-- <img
-          src="/media/image/01_face.webp"
-          alt="Vue de face de la figurine LEGO"
-        />
-        <img
-          src="/media/image/02_tiersDroit.webp"
-          alt="Vue de tiers face droit de la figurine LEGO"
-        />
-        <img
-          src="/media/image/03_troisQuartsDroit.webp"
-          alt="Vue de trois quarts face droit de la figurine LEGO"
-        />
-        <img
-          src="/media/image/04_ProfileDroit.webp"
-          alt="Vue de profil droit de la figurine LEGO"
-        />
-        <img
-          src="/media/image/05_troisQuartsDosDroit.webp"
-          alt="Vue de trois quarts dos droit de la figurine LEGO"
-        />
-        <img
-          src="/media/image/06_dos.webp"
-          alt="Vue de dos de la figurine LEGO"
-        />
-        <img
-          src="/media/image/07_troisQuartsDosGauche.webp"
-          alt="Vue de trois quarts dos gauche de la figurine LEGO"
-        />
-        <img
-          src="/media/image/08_ProfileGauche.webp"
-          alt="Vue de profil gauche de la figurine LEGO"
-        />
-        <img
-          src="/media/image/09_troisQuartsGauche.webp"
-          alt="Vue de trois quarts face gauche de la figurine LEGO"
-        />
-        <img
-          src="/media/image/10_tiersGauche.webp"
-          alt="Vue de tiers face gauche de la figurine LEGO"
-        /> -->
+        <div
+          id="viewer360"
+          style="transform: scale(1); transition: transform 0.2s ease"
+        >
+          <img
+            id="legoImage"
+            src="/media/image/01_face.png"
+            alt="Vue de face de la figurine LEGO"
+          />
+        </div>
       </section>
 
-      <section id="pieces"></section>
+      <section class="transition"></section>
+
+      <section id="pieces">
+        <div class="image-container">
+          <img
+            src="/media/image/00_pieces.webp"
+            alt="Figurine LEGO démontée"
+            class="lego-image"
+          />
+          <div class="pastille pastille-tete" data-info="Tête"></div>
+          <div class="pastille pastille-bras" data-info="Bras"></div>
+          <div class="pastille pastille-main" data-info="Main"></div>
+          <div class="pastille pastille-jambe" data-info="Jambe"></div>
+          <div class="pastille pastille-hanches" data-info="Hanches"></div>
+          <div class="pastille pastille-torse" data-info="Torse"></div>
+        </div>
+        <div id="texte-data-info"><p class="texte-data-info"></p></div>
+      </section>
 
       <section id="histoire"></section>
 
