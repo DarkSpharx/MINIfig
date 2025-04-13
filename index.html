@@ -160,7 +160,7 @@
               <div id="close-menu-passif"></div>
               <div id="close-menu-actif" class="display-none"></div>
             </div>
-            <ul>
+            <ul id="burger-menu-ul">
               <!-- <li class="burger-menu-li">
                 <a class="burger-menu-a" href="/">Accueil</a>
               </li> -->
@@ -298,9 +298,11 @@
             d="M493.98,49.05c-.21,1.54-1.52,2.52-3.08,2.31-1.52-.21-2.55-1.55-2.35-3.07.2-1.51,1.61-2.56,3.15-2.35,1.5.2,2.49,1.56,2.27,3.11Z"
           />
         </svg>
-        <h1>Le site de la figurine LEGO</h1>
+        <h1>La figurine LEGO</h1>
         <a href="#fig360"><button>Découvrez-la</button></a>
       </section>
+
+      <!-- <section class="transition1"></section> -->
 
       <section id="fig360">
         <div
@@ -317,26 +319,36 @@
 
       <section class="transition"></section>
 
+
       <section id="pieces">
+        <h2>Anatomie d'une minifig</h2>
         <div class="image-container">
           <img
-            src="/media/image/00_pieces.webp"
+            src="/media/image/00_pieces.png"
             alt="Figurine LEGO démontée"
             class="lego-image"
           />
-          <div class="pastille pastille-tete" data-info="Tête"></div>
-          <div class="pastille pastille-bras" data-info="Bras"></div>
-          <div class="pastille pastille-main" data-info="Main"></div>
-          <div class="pastille pastille-jambe" data-info="Jambe"></div>
-          <div class="pastille pastille-hanches" data-info="Hanches"></div>
-          <div class="pastille pastille-torse" data-info="Torse"></div>
+          <div class="pastille pastille-tete" data-info="tête"></div>
+          <div class="pastille pastille-bras" data-info="bras"></div>
+          <div class="pastille pastille-main" data-info="mains"></div>
+          <div class="pastille pastille-jambe" data-info="jambes"></div>
+          <div class="pastille pastille-hanches" data-info="hanches"></div>
+          <div class="pastille pastille-torse" data-info="torse"></div>
+          <div id="texte-data-info">
+            <p class="texte-data-info"></p>
+          </div>
         </div>
-        <div id="texte-data-info"><p class="texte-data-info"></p></div>
       </section>
 
-      <section id="histoire"></section>
-
-      <section id="histoire"></section>
+      <section id="histoire">
+        <div id="histoire-container">
+          <h2>Histoire de la figurine LEGO</h2>
+          <div>
+          <img src="" alt="">
+          <p>LEGO a d’abord lancé en 1974 sa première figurine, un gros tas de briques avec les bras mobiles mais les jambes fixes. Je vous laisse imaginer la taille des sets si ils avaient poursuivi à cette échelle ! Puis un second essai en 1975 avec ce qui s’apparente clairement à l’ancêtre de la minifig, sans réels bras ni jambes, mais on commence à voir l’idée.</p>
+          </div>
+        </div>
+      </section>
 
       <section id="contact"></section>
     </main>

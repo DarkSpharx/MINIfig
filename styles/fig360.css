@@ -1,6 +1,7 @@
 /* Styles pour la section d'animation de la figurine */
 #fig360 {
   width: 100%;
+  min-height: 100vh; /* La section prend toute la hauteur de la fenêtre */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +23,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -32,17 +33,30 @@
   transform: scale(1);
   transition: transform 0.2s ease;
   visibility: hidden; /* caché par défaut, visible quand actif */
-  background-color: white;
 }
 
-#viewer360 img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  user-select: none;
+#legoImage {
+  height: 100%;
+  background-color: #feed00;
 }
 
 #viewer360.visible {
   visibility: visible;
   opacity: 1;
+}
+
+/* media queries écran inférieur a 1024px */
+@media only screen and (max-width: 1024px) {
+  #fig360 {
+    height: 100vh;
+    width: auto;
+  }
+  #viewer360 {
+    height: 100vh;
+    width: auto;
+  }
+  #legoImage {
+    height: 100vh;
+    width: auto;
+  }
 }

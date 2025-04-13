@@ -1,21 +1,33 @@
 #pieces {
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  min-height: 100vh;
+  /* background-color: #feed00; */
 }
 
 .image-container {
+  padding: 1rem;
   position: relative;
-  width: 100%;
-  max-width: 1920px;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #000; /* texte noir */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem; /* espacement autour du texte */
+  margin-top: 10rem; /* espacement au-dessus du texte */
+}
 .lego-image {
+  height: 100%;
   width: 100%;
-  height: auto;
-  display: block;
+  max-height: 720px;
 }
 
 .pastille {
@@ -31,45 +43,83 @@
 
 /* Positionnement des pastilles */
 .pastille-tete {
-  top: 26%;
-  left: 48%;
+  top: 6%;
+  left: 46%;
   transform: translate(-50%, -50%);
 }
 .pastille-bras {
-  top: 49%;
-  left: 30%;
+  top: 40%;
+  left: 22%;
   transform: translate(-50%, -50%);
 }
 .pastille-main {
-  top: 58%;
-  left: 79%;
+  top: 50%;
+  left: 91%;
   transform: translate(-50%, -50%);
 }
 .pastille-jambe {
-  top: 69%;
-  left: 64%;
+  top: 75%;
+  left: 74%;
   transform: translate(-50%, -50%);
 }
 .pastille-hanches {
-  top: 65%;
+  top: 69%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .pastille-torse {
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 /* Texte d'information */
-#texte-data-info {
+div#texte-data-info {
+  height: 6rem;
+  display: flex !important;
+  justify-content: center;
   display: none; /* caché par défaut */
-  text-align: center; /* centrer le texte */
-  margin-top: 8px; /* espacement au-dessus */
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
-.texte-data-info {
+p.texte-data-info {
+  text-align: center; /* centrer le texte */
   color: #000; /* texte noir */
-  font-size: 17px; /* taille de police */
-  padding: 8px; /* espacement intérieur */
+  font-size: 4rem; /* taille de police */
+  padding: 1rem; /* espacement autour du texte */
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* media queries écran inférieur a 1024px */
+@media only screen and (max-width: 1024px) {
+  .lego-image {
+    max-height: 400px;
+  }
+  .pastille-tete {
+    top: 6%;
+    left: 46%;
+  }
+  .pastille-bras {
+    top: 38%;
+    left: 22%;
+  }
+  .pastille-main {
+    top: 47%;
+    left: 90%;
+  }
+  .pastille-jambe {
+    top: 68%;
+    left: 74%;
+  }
+  .pastille-hanches {
+    top: 64%;
+    left: 50%;
+  }
+  .pastille-torse {
+    top: 40%;
+    left: 50%;
+  }
 }

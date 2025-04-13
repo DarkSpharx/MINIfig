@@ -26,10 +26,10 @@ header {
 /* logo */
 #logo-header-link {
   cursor: pointer;
-  padding: 8px;
+  padding: 1rem;
 }
 #logo-header-svg {
-  height: 35px;
+  height: 3rem;
   width: auto;
   cursor: pointer;
 }
@@ -47,9 +47,9 @@ header {
   right: 0;
 }
 #open-menu-passif {
-  margin: 8px;
-  height: 35px;
-  width: 25px;
+  margin: 1rem;
+  height: 3rem;
+  width: 2rem;
   cursor: pointer;
   background-image: url("/media/icone/open_menu.svg");
   background-repeat: no-repeat;
@@ -57,9 +57,9 @@ header {
   background-position: center center;
 }
 #open-menu-actif {
-  margin: 8px;
-  height: 35px;
-  width: 25px;
+  margin: 1rem;
+  height: 3rem;
+  width: 2rem;
   cursor: pointer;
   background-image: url("/media/icone/open_menu_hover.svg");
   background-repeat: no-repeat;
@@ -80,12 +80,15 @@ header {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 8px;
+  padding: 1rem;
   position: absolute;
+}
+#burger-menu-ul {
+  width: 100%;
 }
 .burger-menu-li {
   list-style: none;
-  margin-top: 16px;
+  margin-top: 1rem;
   padding: 0;
   display: flex;
   flex-direction: column;
@@ -93,9 +96,9 @@ header {
 .burger-menu-a {
   text-decoration: none;
   color: black;
-  font-size: 17px;
+  font-size: 1rem;
   font-weight: bold;
-  padding: 8px;
+  padding: 1rem;
   border-radius: 4px;
   background-color: white;
 }
@@ -106,14 +109,14 @@ header {
 }
 /* icone pour fermer le burger menu */
 #close-menu-icone {
-  height: 35px;
+  height: 3rem;
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
 #close-menu-passif {
-  height: 35px;
-  width: 25px;
+  height: 3rem;
+  width: 2rem;
   cursor: pointer;
   background-image: url("/media/icone/close_menu.svg");
   background-repeat: no-repeat;
@@ -121,8 +124,8 @@ header {
   background-position: center center;
 }
 #close-menu-actif {
-  height: 35px;
-  width: 25px;
+  height: 3rem;
+  width: 2rem;
   cursor: pointer;
   background-image: url("/media/icone/close_menu_hover.svg");
   background-repeat: no-repeat;
@@ -141,6 +144,7 @@ header {
   display: block;
   transform: translateX(0);
   width: 25vw;
+  max-width: 500px;
 }
 
 /* media queries écran supérieur a 1920px */
@@ -167,6 +171,6 @@ header {
   #burger-menu.burger-menu-open {
     transform: translateX(0);
     height: 100vh;
-    width: 100vw;
+    width: 100%;
   }
 }

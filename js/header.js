@@ -56,7 +56,6 @@ openMenu.addEventListener("click", () => {
 
 // Enlever la classe .burger-menu-open a burgerMenu au clic sur closeMenu
 closeMenu.addEventListener("click", () => {
-  console.log("clic icon closeMenu");
   burgerMenu.classList.remove("burger-menu-open");
 });
 
