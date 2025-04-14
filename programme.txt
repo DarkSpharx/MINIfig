@@ -1,0 +1,6 @@
+c1 enDev ce que j'ai utilisé (outils méthode) 
+c2 maquette 
+c3 html css responsive (5 exemples)
+c4 js dynamique (au moins 3 exmples mais pas de nav ou scroll top)
+
+c5 accéssibilité / référencement / sécurité
