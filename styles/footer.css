@@ -23,8 +23,13 @@
   margin-bottom: 5rem;
 }
 
+.footer-logo {
+  margin-bottom: 1rem;
+}
+
 .footer-logo img {
-  width: 100px;
+  height: 2rem;
+  margin: 0.5rem;
 }
 
 .footer-links {

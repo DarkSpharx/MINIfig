@@ -1,9 +1,12 @@
 /* Global settings */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:800");
+
 body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
   /* background-color: transparent; */
@@ -27,7 +30,7 @@ main {
 }
 
 .transition {
-  background-image: url('/media/image/11_face.png');
+  background-image: url("/media/image/11_face.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -35,7 +38,6 @@ main {
   min-height: 100vh; /* Pour remplir l’écran */
   transform: scale(1.5);
   margin-bottom: 5rem;
-  /* background-color: white;s */
 }
 
 #topBtn {
@@ -43,9 +45,9 @@ main {
   bottom: 3rem;
   right: 3rem;
   z-index: 1000;
-  background-color: #feed00; /* Jaune LEGO */
-  color: #e3000b;            /* Rouge LEGO */
-  border: none;
+  background-color: #feed00;
+  color: #e3000b;
+  border: 2px solid #e3000b;
   padding: 12px 16px;
   border-radius: 100%;
   font-size: 1.5rem;
@@ -56,11 +58,10 @@ main {
 }
 #topBtn:hover {
   background-color: #feed00;
-  color: #1E5AA8;
+  color: #1e5aa8;
   transform: translateY(-4px);
+  border: #1e5aa8 2px solid;
 }
-
-
 
 /* jaunelego: #feed00; */
 /* rougelego: #e3000b; */

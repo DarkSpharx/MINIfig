@@ -77,11 +77,13 @@ header {
   height: calc(var(--vh, 1vh) * 100);
   transform: translate(100vw);
   transition: transform 0.5s;
-  display: flex;
   flex-direction: column;
   text-align: center;
   padding: 1rem;
   position: absolute;
+  max-width: 500px;
+  min-width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 #burger-menu-ul {
   width: 100%;
@@ -104,7 +106,7 @@ header {
 }
 .burger-menu-a:hover {
   background-color: black;
-  color: white;
+  color: #feed00;
   transition: all 0.3s ease-in-out;
 }
 /* icone pour fermer le burger menu */
@@ -131,6 +133,23 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+/* réseaux sociaux */
+.burger-socials {
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.burger-socials a {
+  color: black;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+.burger-socials a:hover {
+  color: #1e5aa8;
 }
 
 /* les class a ajouter avec le header.js pour le header */
@@ -162,6 +181,9 @@ header {
 
 /* media queries écran inférieur a 768px */
 @media only screen and (max-width: 768px) {
+  header {
+    background-color: #1e5aa8;
+  }
   #burger-menu {
     height: calc(var(--vh, 1vh) * 100);
     transform: translate(100vw);
