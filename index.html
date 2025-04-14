@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
     <title>MINIfig</title>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="lego, figurine, minifig, minifigure," />
+		<meta name="author" content="Frédéric ARNOULD">	
+		<meta name="robots" content="">
     <link
       rel="icon"
       type="image/png"
@@ -23,13 +26,17 @@
     <link rel="stylesheet" href="styles/fig360.css" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/pieces.css" />
+    <link rel="stylesheet" href="styles/histoire.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script type="module" src="js/scrollFig.js"></script>
     <script type="module" src="js/header.js"></script>
     <script type="module" src="js/pieces.js"></script>
+    <script type="module" src="js/top.js"></script>
   </head>
   <body>
     <header>
@@ -319,7 +326,6 @@
 
       <section class="transition"></section>
 
-
       <section id="pieces">
         <h2>Anatomie d'une minifig</h2>
         <div class="image-container">
@@ -328,12 +334,12 @@
             alt="Figurine LEGO démontée"
             class="lego-image"
           />
-          <div class="pastille pastille-tete" data-info="tête"></div>
-          <div class="pastille pastille-bras" data-info="bras"></div>
-          <div class="pastille pastille-main" data-info="mains"></div>
-          <div class="pastille pastille-jambe" data-info="jambes"></div>
-          <div class="pastille pastille-hanches" data-info="hanches"></div>
-          <div class="pastille pastille-torse" data-info="torse"></div>
+          <div class="pastille pastille-tete" data-info="la tête"></div>
+          <div class="pastille pastille-bras" data-info="les bras"></div>
+          <div class="pastille pastille-main" data-info="les mains"></div>
+          <div class="pastille pastille-jambe" data-info="les jambes"></div>
+          <div class="pastille pastille-hanches" data-info="les hanches"></div>
+          <div class="pastille pastille-torse" data-info="le torse"></div>
           <div id="texte-data-info">
             <p class="texte-data-info"></p>
           </div>
@@ -341,20 +347,160 @@
       </section>
 
       <section id="histoire">
-        <div id="histoire-container">
-          <h2>Histoire de la figurine LEGO</h2>
-          <div>
-          <img src="" alt="">
-          <p>LEGO a d’abord lancé en 1974 sa première figurine, un gros tas de briques avec les bras mobiles mais les jambes fixes. Je vous laisse imaginer la taille des sets si ils avaient poursuivi à cette échelle ! Puis un second essai en 1975 avec ce qui s’apparente clairement à l’ancêtre de la minifig, sans réels bras ni jambes, mais on commence à voir l’idée.</p>
+        <div class="container">
+          <h2 class="section-title">Histoire de la figurine LEGO</h2>
+
+          <div class="lego-cards">
+            <!-- Card 1 -->
+            <div class="lego-card">
+              <img
+                src="/media/image/brevet-fig.jpg"
+                alt="Schéma de la figurine LEGO"
+              />
+              <div class="card-text">
+                <p>C’est le 29 août 1977 qu’a été déposé le premier brevet de la figurine telle qu’on la connaît encore aujourd’hui.
+                  Au passage, si vous voulez jeter un coup d’oeil au brevet, la version US est disponible à cette adresse : <a href="https://www.hellobricks.com/pdf/LEGO_USA_patent.pdf" target="_blank">Brevet US</a>.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="lego-card">
+              <img
+                src="/media/image/plan-fig.jpg"
+                alt="Évolution des figurines LEGO"
+              />
+              <div class="card-text">
+                <p>
+                  C’est donc en 1978 que la figurine LEGO moderne est apparue, avec de vrais bras et jambes, et l’iconique sourire générique tout simple (sachant qu’il y a en 2018 plus de 650 visages différents actuellement disponibles). 
+                  Et, pour l’anecdote, pas encore de tampographie : en 1978, les motifs étaient des autocollants à poser, ce n’est qu’en 1979 (ou toute fin 1978 pour ceux qui avaient les sets un peu en avance) que les premières impressions ont été commercialisées.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="lego-card">
+              <img
+                src="/media/image/evolution-fig.jpg"
+                alt="Premiers personnages LEGO"
+              />
+              <div class="card-text">
+                <p>
+                  En 1974 la première figurine, un empilement de briques avec les bras mobiles mais les jambes fixes. Puis un second essai en 1975 avec ce qui s’apparente clairement à l’ancêtre de la minifig, sans réels bras ni jambes, mais on commence à voir l’idée.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="lego-card">
+              <img
+                src="/media/image/prime-fig.jpg"
+                alt="Premiers personnages LEGO"
+              />
+              <div class="card-text">
+                <p>
+                  Une minifig sans cheveux a exactement la hauteur de 4 briques
+                  LEGO. Rien n’est laissé au hasard chez LEGO !
+                  Si l’histoire a commencé avec environ 20 personnages différents (policier, docteur, pompier, chevalier, astronaute…), LEGO a depuis créé plus de 8000 figurines différentes. Les têtes jaunes ont été pensées pour que tous les enfants
+                  puissent s’y identifier. D'autres couleurs sont arrivées en 2003.
+                  Pour briller en société : Yoda fut le premier à avoir des
+                  mini-jambes (2002), et le fauteuil roulant est apparu en 2016.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lego-info">
+            <p id="text-pdf">Vous pouvez découvrir toute l’évolution dans ce PDF :</p>
+            <a
+              href="/media/LEGOminifigure40.pdf"
+              target="_blank"
+              class="pdf-button"
+              >Voir le PDF</a
+            >
           </div>
         </div>
       </section>
-
-      <section id="contact"></section>
     </main>
 
-    <footer>
-      <p>&copy; MINIfig 2025</p>
+    <!-- Bouton Retour en Haut -->
+    <button id="topBtn" title="Retour en haut">
+      <i class="fas fa-angle-up"></i>
+    </button>
+
+    <footer class="lego-footer">
+      <div id="contact" class="contact-container">
+        <h2>Contactez-nous</h2>
+        <form id="legoContactForm" novalidate>
+          <label for="name">Nom</label>
+          <input type="text" id="name" name="name" required placeholder="Ton nom...">
+      
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="Ton email...">
+      
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Ton message..."></textarea>
+      
+          <button type="submit">Envoyer</button>
+      
+          <p id="formStatus" class="status-msg"></p>
+        </form>
+      </div>
+      <div class="footer-container">
+        <div class="footer-logo">
+          <img src="media/logo/logo_color.svg" alt="Logo LEGO" />
+        </div>
+
+        <div class="footer-links">
+          <a href="https://www.lego.com/fr-fr" target="_blank" rel="noopener"
+            >LEGO Store</a
+          >
+          <a
+            href="https://www.lego.com/fr-fr/aboutus"
+            target="_blank"
+            rel="noopener"
+            >À propos</a
+          >
+          <a
+            href="https://www.lego.com/fr-fr/service"
+            target="_blank"
+            rel="noopener"
+            >Service client</a
+          >
+        </div>
+
+        <div class="footer-socials">
+          <a
+            href="https://www.facebook.com/LEGO"
+            target="_blank"
+            aria-label="Facebook LEGO"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/lego/"
+            target="_blank"
+            aria-label="Instagram LEGO"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://www.youtube.com/user/LEGO"
+            target="_blank"
+            aria-label="YouTube LEGO"
+          >
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a
+            href="https://twitter.com/LEGO_Group"
+            target="_blank"
+            aria-label="Twitter LEGO"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">© MINIfig 2025 – Projet réalisé par Frédéric ARNOULD - Tous droits réservés</p>
     </footer>
   </body>
 </html>

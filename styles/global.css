@@ -7,8 +7,6 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   /* background-color: transparent; */
-  background-color: #feed00;
-
 }
 * {
   scroll-behavior: smooth;
@@ -37,7 +35,32 @@ main {
   min-height: 100vh; /* Pour remplir l’écran */
   transform: scale(1.5);
   margin-bottom: 5rem;
+  /* background-color: white;s */
 }
+
+#topBtn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 1000;
+  background-color: #feed00; /* Jaune LEGO */
+  color: #e3000b;            /* Rouge LEGO */
+  border: none;
+  padding: 12px 16px;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: none; /* Caché par défaut */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+#topBtn:hover {
+  background-color: #feed00;
+  color: #1E5AA8;
+  transform: translateY(-4px);
+}
+
+
 
 /* jaunelego: #feed00; */
 /* rougelego: #e3000b; */

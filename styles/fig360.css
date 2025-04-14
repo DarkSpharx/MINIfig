@@ -37,7 +37,7 @@
 
 #legoImage {
   height: 100%;
-  background-color: #feed00;
+  background-color: white;
 }
 
 #viewer360.visible {
@@ -45,8 +45,8 @@
   opacity: 1;
 }
 
-/* media queries écran inférieur a 1024px */
-@media only screen and (max-width: 1024px) {
+/* media queries écran inférieur a 768px */
+@media only screen and (max-width: 768px) {
   #fig360 {
     height: 100vh;
     width: auto;

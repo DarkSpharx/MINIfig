@@ -34,7 +34,7 @@ const images = [
     src: "/media/image/10_tiersGauche.png",
     alt: "Vue de tiers face gauche de la figurine LEGO",
   },
-  { src: "/media/image/11_face.png", alt: "Vue de face de la figurine LEGO" },
+  { src: "/media/image/01_face.png", alt: "Vue de face de la figurine LEGO" },
 ];
 
 // Sélection des éléments HTML

@@ -1,10 +1,29 @@
 #pieces {
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  min-height: 100vh;
-  /* background-color: #feed00; */
+  background-image: url("/media/image/bg_fig.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  background-color: #1E5AA8;
+  min-height: 100vh; /* La section pieces prend toute la hauteur de la fenêtre */
+& h2 {
+  width: fit-content;
+  margin: auto;
+  display: block;
+  text-align: center;
+  font-size: 3rem;
+  color: #000; /* texte noir */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1rem; /* espacement autour du texte */
+  background-color: white;
+  border-radius: 1rem;
+}
 }
 
 .image-container {
@@ -14,20 +33,17 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border-radius: 1rem;
 }
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  color: #000; /* texte noir */
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 1rem; /* espacement autour du texte */
-  margin-top: 10rem; /* espacement au-dessus du texte */
-}
+
 .lego-image {
   height: 100%;
   width: 100%;
-  max-height: 720px;
+  max-height: 600px;
+  background-color: white;
+  border-radius: 1rem 1rem 0 0;
+  padding: 1rem;
+  padding-top: 6rem;
 }
 
 .pastille {
@@ -43,23 +59,23 @@ h2 {
 
 /* Positionnement des pastilles */
 .pastille-tete {
-  top: 6%;
+  top: 19%;
   left: 46%;
   transform: translate(-50%, -50%);
 }
 .pastille-bras {
-  top: 40%;
-  left: 22%;
+  top: 45%;
+  left: 24%;
   transform: translate(-50%, -50%);
 }
 .pastille-main {
-  top: 50%;
-  left: 91%;
+  top: 53%;
+  left: 88%;
   transform: translate(-50%, -50%);
 }
 .pastille-jambe {
-  top: 75%;
-  left: 74%;
+  top: 73%;
+  left: 73%;
   transform: translate(-50%, -50%);
 }
 .pastille-hanches {
@@ -68,13 +84,14 @@ h2 {
   transform: translate(-50%, -50%);
 }
 .pastille-torse {
-  top: 40%;
+  top: 46%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 /* Texte d'information */
 div#texte-data-info {
+  display: none;
   height: 6rem;
   display: flex !important;
   justify-content: center;
@@ -82,44 +99,52 @@ div#texte-data-info {
   align-items: center;
   justify-content: center;
   align-content: center;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
 }
 
 p.texte-data-info {
   text-align: center; /* centrer le texte */
   color: #000; /* texte noir */
-  font-size: 4rem; /* taille de police */
+  font-size: 2rem; /* taille de police */
   padding: 1rem; /* espacement autour du texte */
   font-weight: bold;
   text-transform: uppercase;
+  color: #1E5AA8;
 }
 
-/* media queries écran inférieur a 1024px */
-@media only screen and (max-width: 1024px) {
+/* media queries écran inférieur a 768px */
+@media only screen and (max-width: 768px) {
+  #pieces {
+    & h2 {
+      font-size: 2rem; /* taille de police pour les petits écrans */
+    }
+  }
   .lego-image {
-    max-height: 400px;
+    max-height: 450px;
   }
   .pastille-tete {
-    top: 6%;
+    top: 22%;
     left: 46%;
   }
   .pastille-bras {
-    top: 38%;
-    left: 22%;
+    top: 45%;
+    left: 25%;
   }
   .pastille-main {
-    top: 47%;
-    left: 90%;
+    top: 52%;
+    left: 86%;
   }
   .pastille-jambe {
-    top: 68%;
-    left: 74%;
+    top: 69%;
+    left: 72%;
   }
   .pastille-hanches {
-    top: 64%;
+    top: 66%;
     left: 50%;
   }
   .pastille-torse {
-    top: 40%;
+    top: 46%;
     left: 50%;
   }
 }
