@@ -2,30 +2,29 @@
 #fig360 {
   width: 100%;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-image: url(/media/image/01_face.png);
+  /* background-image: url(/media/image/01_face.png); */
   background-repeat: no-repeat;
   background-size: contain;
   object-fit: contain;
   background-position: center center;
   background-attachment: fixed;
-}
-
-#fig360 {
   position: relative;
-  height: 100vh;
+  /* background-color: white; */
 }
 
 #viewer360 {
+  background-color: white;
   margin: auto;
   position: fixed;
   top: 0;
-  /* left: 0; */
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,7 +37,9 @@
 
 #legoImage {
   height: 100%;
+  width: auto;
   background-color: white;
+  transition: transform 0.2s ease;
 }
 
 #viewer360.visible {
@@ -46,18 +47,18 @@
   opacity: 1;
 }
 
-/* media queries écran inférieur a 768px */
-@media only screen and (max-width: 768px) {
+/* media queries écran inférieur a 1023px */
+@media only screen and (max-width: 1023px) {
   #fig360 {
-    height: 100vh;
+    height: 50vh;
     width: auto;
   }
   #viewer360 {
-    height: 100vh;
+    height: 50vh;
     width: auto;
   }
   #legoImage {
-    height: 100vh;
+    height: 50vh;
     width: auto;
   }
 }

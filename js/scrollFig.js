@@ -42,6 +42,19 @@ const figSection = document.getElementById("fig360");
 const imgElement = document.getElementById("legoImage");
 const viewer = document.getElementById("viewer360");
 
+// Fonction pour convertir vh en pixels
+function getPixelsFromVh(vh) {
+  return (window.innerHeight / 100) * vh;
+}
+
+// Valeur dynamique de pixelsPerFrame basée sur 9vh
+let pixelsPerFrame = getPixelsFromVh(10);
+
+// Met à jour pixelsPerFrame si la fenêtre est redimensionnée
+window.addEventListener("resize", () => {
+  pixelsPerFrame = getPixelsFromVh(9);
+});
+
 // Variables de gestion de l'état
 let currentIndex = 0;
 let lastKnownScrollY = window.scrollY;
@@ -49,7 +62,6 @@ let ticking = false;
 let zoomLevel = 1;
 const minZoom = 0.9;
 const maxZoom = 1.5; // Réduit le zoom maximum
-const pixelsPerFrame = 80;
 
 // Met à jour l'image affichée
 function updateImage(index) {

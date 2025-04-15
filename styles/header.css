@@ -31,41 +31,28 @@ header {
 #logo-header-svg {
   height: 3rem;
   width: auto;
-  cursor: pointer;
 }
-#logo-header-svg:hover {
-  transform: scale(0.9);
-  opacity: 0.9;
-  transition: all 0.3s ease-in-out;
-}
+
 /* icone pour ouvrir le burger menu */
-#open-menu-icone {
-  width: fit-content;
+#open-menu {
   margin-left: auto;
   position: absolute;
   top: 0;
   right: 0;
+  padding: 1rem;
 }
-#open-menu-passif {
-  margin: 1rem;
-  height: 3rem;
-  width: 2rem;
+#icone-open-menu {
   cursor: pointer;
-  background-image: url("/media/icone/open_menu.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-}
-#open-menu-actif {
-  margin: 1rem;
   height: 3rem;
-  width: 2rem;
-  cursor: pointer;
-  background-image: url("/media/icone/open_menu_hover.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  width: auto;
 }
+#icone-open-menu-hover {
+  display: none;
+  cursor: pointer;
+  height: 3rem;
+  width: auto;
+}
+
 /* menu burger masqué */
 #burger-menu {
   z-index: 2;
@@ -84,9 +71,13 @@ header {
   max-width: 500px;
   min-width: 300px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(0);
+  width: 25vw;
+  max-width: 500px;
 }
 #burger-menu-ul {
   width: 100%;
+  margin-top: 5rem;
 }
 .burger-menu-li {
   list-style: none;
@@ -101,7 +92,7 @@ header {
   font-size: 1rem;
   font-weight: bold;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 1rem;
   background-color: white;
 }
 .burger-menu-a:hover {
@@ -110,34 +101,29 @@ header {
   transition: all 0.3s ease-in-out;
 }
 /* icone pour fermer le burger menu */
-#close-menu-icone {
-  height: 3rem;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+#close-menu {
+  width: fit-content;
+  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
 }
-#close-menu-passif {
-  height: 3rem;
-  width: 2rem;
+#icone-close-menu {
   cursor: pointer;
-  background-image: url("/media/icone/close_menu.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  height: 3rem;
+  width: auto;
 }
-#close-menu-actif {
-  height: 3rem;
-  width: 2rem;
+#icone-close-menu-hover {
+  display: none;
   cursor: pointer;
-  background-image: url("/media/icone/close_menu_hover.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  height: 3rem;
+  width: auto;
 }
 
 /* réseaux sociaux */
 .burger-socials {
-  margin-top: 1rem;
+  margin-top: 3rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -161,9 +147,6 @@ header {
 }
 #burger-menu.burger-menu-open {
   display: block;
-  transform: translateX(0);
-  width: 25vw;
-  max-width: 500px;
 }
 
 /* media queries écran supérieur a 1920px */
@@ -179,20 +162,52 @@ header {
   }
 }
 
-/* media queries écran inférieur a 768px */
-@media only screen and (max-width: 768px) {
-  header {
-    background-color: #1e5aa8;
-  }
+/* media queries écran inférieur a 1023px */
+@media only screen and (max-width: 1023px) {
   #burger-menu {
-    height: calc(var(--vh, 1vh) * 100);
-    transform: translate(100vw);
-    transition: transform 0.5s;
-    position: fixed;
-  }
-  #burger-menu.burger-menu-open {
-    transform: translateX(0);
     height: 100vh;
-    width: 100%;
+    height: calc(var(--vh, 1vh) * 100);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: translateX(0);
+    min-width: 100vw;
+  }
+  #burger-menu-ul {
+    width: auto;
+    margin-top: 4rem;
+    padding: 3rem;
+  }
+  .burger-menu-li {
+    margin-top: 3rem;
+  }
+  .burger-menu-a {
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: white;
+  }
+  .burger-socials {
+    margin-top: 3rem;
+    padding: 4rem;
+  }
+  .burger-socials a {
+    font-size: 5rem;
+  }
+  #logo-header-svg {
+    height: 7rem;
+  }
+  #logo-header-svg-hover {
+    height: 7rem;
+  }
+  #icone-open-menu {
+    height: 7rem;
+  }
+  #icone-open-menu-hover {
+    height: 7rem;
+  }
+  #icone-close-menu {
+    height: 7rem;
+  }
+  #icone-close-menu-hover {
+    height: 7rem;
   }
 }

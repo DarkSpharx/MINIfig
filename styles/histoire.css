@@ -7,6 +7,8 @@
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  min-height: 100vh; /* La section prend toute la hauteur de la fenêtre */
+  min-height: calc(var(--vh, 1vh) * 100);
   & h2 {
     margin: 0 auto 4rem auto;
     text-align: center;
@@ -68,6 +70,7 @@
   display: block;
   height: auto;
   border: #1e5aa8 2px solid;
+  cursor: pointer;
 }
 
 /* Texte dans la carte */

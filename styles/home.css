@@ -2,7 +2,6 @@
 #home {
   min-height: 100vh; /* La section home prend toute la hauteur de la fenêtre */
   min-height: calc(var(--vh, 1vh) * 100);
-
   position: relative;
   overflow: hidden;
   display: flex;
@@ -10,51 +9,60 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  #bg-home {
-    height: 100vh; /* La section home prend toute la hauteur de la fenêtre */
-    height: calc(var(--vh, 1vh) * 100);
-    width: 100%;
-    background-image: url("/media/image/bg_fig.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Mettre l'image en arrière-plan */
-    opacity: 1;
+}
+#bg-home {
+  min-height: 100vh; /* La section home prend toute la hauteur de la fenêtre */
+  min-height: calc(var(--vh, 1vh) * 100);
+  height: 100%;
+  width: 100%;
+  background-image: url("/media/image/bg_fig.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Mettre l'image en arrière-plan */
+  fit
+}
+#logo-home-svg {
+  height: 200px;
+  max-width: 800px;
+}
+h1 {
+  margin: 5rem auto;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.cta {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #feed00;
+  color: black;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.cta:hover {
+  background-color: black;
+  color: white;
+}
+
+/* media queries écran inférieur a 1023px */
+@media only screen and (max-width: 1023px) {
+  h1 {
+    margin: 5rem auto;
+    font-size: 8rem;
   }
-  & #logo-home-svg {
-    padding: 1rem;
-    height: 10rem;
-    max-height: 150px;
-    width: auto;
-    margin-bottom: 2rem;
-  }
-  & h1 {
+  .cta {
+    padding: 2rem 5rem;
+    border-radius: 2rem;
     font-size: 5rem;
-    margin-bottom: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  & a {
-    text-decoration: none;
-    & button {
-      cursor: pointer;
-      background-color: #feed00;
-      color: black;
-      padding: 1rem 3rem;
-      border: none;
-      border-radius: 1rem;
-      font-size: 2rem;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    & button:hover {
-      background-color: black;
-      color: white;
-    }
   }
 }
 
