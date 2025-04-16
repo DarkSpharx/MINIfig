@@ -1,7 +1,7 @@
 /* Section & conteneur */
 #histoire {
   background-color: #feed00;
-  padding: 4rem 1rem;
+  padding: 5rem;
   background-image: url("/media/image/bg_fig.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,40 +9,31 @@
   background-attachment: fixed;
   min-height: 100vh; /* La section prend toute la hauteur de la fenêtre */
   min-height: calc(var(--vh, 1vh) * 100);
-  & h2 {
-    margin: 0 auto 4rem auto;
-    text-align: center;
-    font-size: 4rem;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 2rem;
-    overflow: hidden;
-    vertical-align: middle;
-    text-shadow: 1px 1px white, 2px 2px white, 3px 3px white, 4px 4px white,
-      5px 5px white, 6px 6px white, 7px 7px white, 8px 8px white, 9px 9px white,
-      10px 10px white, 11px 11px white, 12px 12px white, 13px 13px white,
-      14px 14px white, 15px 15px white, 16px 16px white, 17px 17px white,
-      18px 18px white, 19px 19px white, 20px 20px white;
-  }
 }
-.container {
-  max-width: 1280px;
+
+#container-histoire {
   margin: auto;
 }
 
-/* Titre */
-.section-title {
+#h2-histoire {
+  margin-bottom: 5rem;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 3rem;
+  font-size: 6rem;
+  color: #1E5AA8;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black,
+  5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black, 9px 9px black,
+  10px 10px black, 11px 11px black, 12px 12px black, 13px 13px black,
+  14px 14px black, 15px 15px black, 16px 16px black, 17px 17px black,
+  18px 18px black, 19px 19px black, 20px 20px black;
 }
 
-/* Cartes en grille */
+/* les cartes */
 .lego-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  column-count: 4;
+  column-gap: 5rem;
   margin-bottom: 3rem;
 }
 
@@ -55,12 +46,20 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  & a {
-    text-decoration: none;
-    color: white;
-  }
-  & a:hover {
-    color: #000;
+  & .card-text{
+    & p {
+      padding: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #feed00;
+      & a {
+        text-decoration: none;
+        color: white;
+      }
+      & a:hover {
+        color: #000;
+      }
+    }
   }
 }
 
@@ -71,17 +70,6 @@
   height: auto;
   border: #1e5aa8 2px solid;
   cursor: pointer;
-}
-
-/* Texte dans la carte */
-.card-text {
-  padding: 1.2rem;
-}
-.card-text p {
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #feed00;
 }
 
 /* Info finale (hors cartes) */
@@ -127,25 +115,82 @@
   color: black;
 }
 
+#lightbox {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+#lightbox-img {
+  height: 66vh;
+  height: calc(var(--vh, 1vh) * 66);
+  width: auto;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover,
+.close:focus {
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+
 /* Responsive */
-@media (max-width: 768px) {
-  #histoire {
-    & h2 {
-      font-size: 3rem;
-    }
+@media only screen and (max-width: 1023px) {
+  #h2-histoire {
+    font-size: 6rem;
   }
-  .lego-block {
-    flex-direction: column;
-    text-align: center;
+  .lego-cards {
+    column-count: 2;
+    column-gap: 5rem;
   }
-  .lego-text p {
-    text-align: justify;
-  }
-  .section-title {
-    font-size: 2rem;
-  }
-  .pdf-button {
+  .lego-card {
+    margin-bottom: 5rem;
     width: 100%;
+  }
+ 
+  .pdf-button {
+    width: fit-content;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  #h2-histoire {
+    font-size: 6rem;
+  }
+  .lego-cards {
+    column-count: 1;
+    column-gap: 2rem;
+  }
+  .lego-card {
+    margin-bottom: 5rem;
+    width: 100%;
+  }
+ 
+  .pdf-button {
+    width: fit-content;
     text-align: center;
     margin-top: 1rem;
   }

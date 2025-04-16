@@ -1,22 +1,19 @@
-/* Styles pour la section d'animation de la figurine */
+/* Section contenant l'animation */
 #fig360 {
   width: 100%;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: 250vh; /* Hauteur artificielle pour un scroll plus fluide */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* background-image: url(/media/image/01_face.png); */
   background-repeat: no-repeat;
   background-size: contain;
-  object-fit: contain;
   background-position: center center;
   background-attachment: fixed;
   position: relative;
-  /* background-color: white; */
 }
 
+/* Conteneur fixe qui centre et zoom/dézoome l’image */
 #viewer360 {
   background-color: white;
   margin: auto;
@@ -24,7 +21,6 @@
   top: 0;
   width: 100%;
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,9 +28,10 @@
   z-index: 10;
   transform: scale(1);
   transition: transform 0.2s ease;
-  visibility: hidden; /* caché par défaut, visible quand actif */
+  visibility: hidden;
 }
 
+/* Image LEGO */
 #legoImage {
   height: 100%;
   width: auto;
@@ -42,23 +39,26 @@
   transition: transform 0.2s ease;
 }
 
+/* Classe active (optionnelle) */
 #viewer360.visible {
   visibility: visible;
   opacity: 1;
 }
 
-/* media queries écran inférieur a 1023px */
+/* Responsive : adaptation pour écrans ≤ 1023px */
 @media only screen and (max-width: 1023px) {
   #fig360 {
-    height: 50vh;
+    height: 100vh;
     width: auto;
   }
+
   #viewer360 {
-    height: 50vh;
+    height: 100vh;
     width: auto;
   }
+
   #legoImage {
-    height: 50vh;
+    height: 100vh;
     width: auto;
   }
 }

@@ -38,6 +38,8 @@
     <script type="module" src="js/pieces.js"></script>
     <script type="module" src="js/top.js"></script>
     <script type="module" src="js/lightbox.js"></script>
+    <script type="module" src="js/contact.js"></script>
+
   </head>
   <body>
     <header>
@@ -119,17 +121,13 @@
 
     <main>
       <section id="home">
-        <div id="bg-home"></div>
         <img id="logo-home-svg" src="/media/logo/logo_colab_color.svg" alt="logo minifig et lego" />
-        <h1>La figurine<br/>by LEGO</h1>
+        <h1>La figurine by LEGO</h1>
         <a class="cta" href="#fig360">Découvrez-la</a>
       </section>
 
       <section id="fig360">
-        <div
-          id="viewer360"
-          style="transform: scale(1); transition: transform 0.2s ease"
-        >
+        <div id="viewer360">
           <img
             id="legoImage"
             src="/media/image/01_face.png"
@@ -138,16 +136,10 @@
         </div>
       </section>
 
-      <section id="transition">
-        <div id="bg-transition"></div>
-      </section>
-
       <section id="pieces">
-        <h2>
-          <span>Anatomie</span><br />
-          d'une minifig
-        </h2>
-        <div class="image-container">
+        <h2 id="h2-pieces"><span>Anatomie</span><br/>d'une minifig</h2>
+        
+        <div id="container-image-pieces">
           <img
             src="/media/image/00_pieces.png"
             alt="Figurine LEGO démontée"
@@ -166,8 +158,8 @@
       </section>
 
       <section id="histoire">
-        <div class="container">
-          <h2 class="section-title">
+        <div id="container-histoire">
+          <h2 id="h2-histoire">
             <span>Histoire</span><br />de la minifig
           </h2>
 
@@ -269,39 +261,59 @@
     </button>
 
     <footer class="lego-footer">
-      <div id="contact" class="contact-container">
-        <h2>Contactez-nous</h2>
-        <form id="legoContactForm" novalidate>
-          <label for="name">Nom</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="Votre Nom"
-          />
+      <section id="contact-form">
+        <h3 id="h3-contact">Contactez-nous</h3>
+        <form id="form-contact" novalidate>
+          <div id="form-group">
+            <label for="name">
+              Name : 
+            </label>
+            <div class="input-wrapper">
+              <input type="text" name="name" id="name" placeholder="Votre NOM" autofocus></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
+          
+          <div id="form-group">
+            <label for="email">
+              Email : 
+            </label>
+            <div class="input-wrapper">
+              <input type="email" name="email" id="email" placeholder="Votre @email"></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
 
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="Votre adresse email"
-          />
+          <div id="form-group">
+            <label for="subject">
+              Sujet : 
+            </label>
+            <div class="input-wrapper">
+              <input type="email" name="subject" id="subject" placeholder="Le sujet de votre message"></input>
+              <i class="validation-icon"></i>
+            </div>
+          </div>
 
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Votre message"
-          ></textarea>
-
-          <button type="submit">Envoyer</button>
-
-          <p id="formStatus" class="status-msg"></p>
+          <div id="form-group">
+            <label for="message">
+              Message : 
+            </label>
+            <div class="input-wrapper">
+              <textarea name="message" id="message"></textarea>
+              <i class="validation-icon"></i>
+            </div>
+            <div id="error-content">
+              <div class="error" id="error-name"></div>
+              <div class="error" id="error-email"></div>
+              <div class="error" id="error-subject"></div>
+              <div class="error" id="error-message"></div>
+            </div>
+          </div>
+            
+          <button type="submit" class="submit">Envoyer</button>
         </form>
+        <div id="response-message"></div>
+      </section>
       </div>
       <div class="footer-container">
         <div class="footer-logo">

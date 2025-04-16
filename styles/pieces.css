@@ -1,57 +1,43 @@
 #pieces {
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
   background-image: url("/media/image/bg_fig.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   background-color: #1e5aa8;
-  min-height: 100vh;
-  padding: 4rem 1rem;
-
-  & h2 {
-    margin: 0 auto 4rem auto;
-    text-align: center;
-    font-size: 4rem;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 2rem;
-    overflow: hidden;
-    vertical-align: middle;
-    text-shadow: 1px 1px white, 2px 2px white, 3px 3px white, 4px 4px white,
-      5px 5px white, 6px 6px white, 7px 7px white, 8px 8px white, 9px 9px white,
-      10px 10px white, 11px 11px white, 12px 12px white, 13px 13px white,
-      14px 14px white, 15px 15px white, 16px 16px white, 17px 17px white,
-      18px 18px white, 19px 19px white, 20px 20px white;
-  }
+  padding: 5rem 1rem;
 }
-
-.image-container {
-  padding: 1rem;
+#h2-pieces {
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 6rem;
+  color: #feed00;
+  font-weight: bold;
+  text-transform: uppercase;
+  vertical-align: middle;
+  text-shadow: 1px 1px black, 2px 2px black, 3px 3px black, 4px 4px black,
+    5px 5px black, 6px 6px black, 7px 7px black, 8px 8px black, 9px 9px black,
+    10px 10px black, 11px 11px black, 12px 12px black, 13px 13px black,
+    14px 14px black, 15px 15px black, 16px 16px black, 17px 17px black,
+    18px 18px black, 19px 19px black, 20px 20px black;
+}
+#container-image-pieces {
+  width: fit-content;
   position: relative;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  border: #feed00 2px solid;
 }
 
 .lego-image {
   height: 100%;
   width: 100%;
-  max-height: 600px;
+  max-height: 500px;
   background-color: white;
-  padding: 1rem;
-  padding-top: 6rem;
-  background-image: url("/media/image/bg_fig.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
 }
 
 .pastille {
@@ -72,135 +58,69 @@
 
 /* Positionnement des pastilles */
 .pastille-tete {
-  top: 19%;
-  left: 46%;
-  transform: translate(-50%, -50%);
+  top: 5%;
+  left: 43%;
 }
 .pastille-bras {
-  top: 45%;
-  left: 24%;
-  transform: translate(-50%, -50%);
+  top: 33%;
+  left: 20%;
 }
 .pastille-main {
-  top: 53%;
-  left: 88%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 85%;
 }
 .pastille-jambe {
-  top: 73%;
-  left: 73%;
-  transform: translate(-50%, -50%);
+  top: 69%;
+  left: 70%;
 }
 .pastille-hanches {
-  top: 69%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 61%;
+  left: 47%;
 }
 .pastille-torse {
-  top: 46%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 47%;
 }
 
 /* Texte d'information */
 div#texte-data-info {
   display: none;
-  height: 6rem;
+  height: 5rem;
   display: flex !important;
   justify-content: center;
   display: none; /* caché par défaut */
   align-items: center;
   justify-content: center;
   align-content: center;
-  background-color: white;
-  background-image: url("/media/image/bg_fig.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  background-color: #feed00;
 }
 
 p.texte-data-info {
   text-align: center; /* centrer le texte */
-  color: #000; /* texte noir */
-  font-size: 2rem; /* taille de police */
+  font-size: 3rem; /* taille de police */
   padding: 1rem; /* espacement autour du texte */
   font-weight: bold;
   text-transform: uppercase;
   color: #1e5aa8;
 }
 
-#lightbox {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  top: 0;
-  left: 0;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-}
 
-#lightbox-img {
-  height: 66vh;
-  height: calc(var(--vh, 1vh) * 66);
-  width: auto;
-}
 
-.close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1;
-}
 
-.close:hover,
-.close:focus {
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.5;
-  transform: scale(1.5);
-  transition: transform 0.3s ease;
-}
 
-/* media queries écran inférieur a 768px */
-@media only screen and (max-width: 768px) {
-  #pieces {
-    & h2 {
-      font-size: 3rem;
-    }
+/* media queries écran inférieur a 1023px */
+@media only screen and (max-width: 1023px) {
+  #h2-pieces {
+    font-size: 6rem;
   }
   .lego-image {
-    max-height: 450px;
+    height: 100%;
+    width: 100%;
+    max-height: 800px;
+    max-width: 800px;
   }
-  .pastille-tete {
-    top: 22%;
-    left: 46%;
-  }
-  .pastille-bras {
-    top: 45%;
-    left: 25%;
-  }
-  .pastille-main {
-    top: 52%;
-    left: 86%;
-  }
-  .pastille-jambe {
-    top: 69%;
-    left: 72%;
-  }
-  .pastille-hanches {
-    top: 66%;
-    left: 50%;
-  }
-  .pastille-torse {
-    top: 46%;
-    left: 50%;
+  .pastille {
+    width: 70px;
+    height: 70px;
   }
 }

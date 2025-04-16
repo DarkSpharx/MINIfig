@@ -33,34 +33,6 @@ main {
   overflow-x: hidden;
 }
 
-#transition {
-  min-height: 80vh; /* La section home prend toute la hauteur de la fenêtre */
-  min-height: calc(var(--vh, 1vh) * 80);
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  & #bg-transition {
-    height: 80vh; /* La section home prend toute la hauteur de la fenêtre */
-    height: calc(var(--vh, 1vh) * 80);
-    width: 100%;
-    background-image: url("/media/image/12_wink.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
-    background-attachment: fixed;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; /* Mettre l'image en arrière-plan */
-    opacity: 1;
-    /* transform: scale(1.5); */
-  }
-}
-
 #topBtn {
   position: fixed;
   bottom: 2rem;
